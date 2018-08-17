@@ -1,0 +1,82 @@
+@media (max-width: 760px) {
+  body {
+    padding-left: 54px;
+  }
+
+  [style *= "width: 322px;"][style *= "position: relative;"] {
+    background-color: #24252b !important;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 54px !important;
+    transition: width .2s;
+    border: none !important;
+    z-index: 2;
+  }
+
+  /**/
+
+  [style *= "width: 322px;"][style *= "position: relative;"]:not(:hover) > [style *= "padding: 10px 8px 8px; margin-top: -6px;"],
+  [style *= "width: 322px;"][style *= "position: relative;"]:not(:hover) [style *= "border-width: 0px 0px 1px; border-color: rgb(43, 44, 51); border-style: solid;"],
+  [style *= "width: 322px;"][style *= "position: relative;"]:not(:hover) [style *= "justify-content: space-between; padding: 10px; height: 44px"]
+  {
+    display: none !important;
+  }
+
+  [style *= "width: 322px;"][style *= "position: relative;"]:not(:hover) [data-text-as-pseudo-element="FAVOURITES"]:before {
+    content: "  FAV";
+  }
+
+  [style *= "width: 322px;"][style *= "position: relative;"]:not(:hover) [data-text-as-pseudo-element="CHATS"] {
+    text-overflow: inherit !important;
+  }
+
+  [style *= "width: 322px;"][style *= "position: relative;"]:not(:hover) [aria-roledescription="Conversation item"],
+  [style *= "width: 322px;"][style *= "position: relative;"]:not(:hover) [aria-roledescription="Conversation item"] > div,
+  [style *= "width: 322px;"][style *= "position: relative;"]:not(:hover) [aria-roledescription="Conversation item"] > div > div,
+  [style *= "width: 322px;"][style *= "position: relative;"]:not(:hover) [aria-roledescription="Conversation item"] > div > div > div {
+    height: 50px !important;
+  }
+
+  /**/
+
+  [style *= "width: 322px;"][style *= "position: relative;"]:hover {
+    width: 322px !important;
+    box-shadow: 3px 0 5px 0 rgba(0, 0, 0, .2);
+  }
+
+  [style *= "width: 322px;"][style *= "position: relative;"] [style *= "margin-left: 4px; margin-top: 4px;"] {
+    overflow: visible !important;
+  }
+
+  [style *= "width: 322px;"][style *= "position: relative;"] [style *= "background-color: rgb(0, 120, 212);"] {
+    background-color: #f00 !important;
+    position: absolute !important;
+    top: 3px;
+    left: -33px;
+  }
+
+  [style *= "margin: 5px 12px;"] {
+    margin: 5px -9px !important;
+  }
+}
+
+button[title="React to this message"] {
+  opacity: .05;
+}
+
+button[title="React to this message"]:hover {
+  opacity: 1;
+}
+
+body:before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 50%;
+  right: 0;
+  height: 20px;
+  z-index: 3;
+  -webkit-app-region: drag;
+}

@@ -1,0 +1,14 @@
+{
+  "name": "skype-patch",
+  "version": "1.0.0",
+  "description": "Restyles the dark theme of the Skype app.",
+  "main": "patch.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "asar": "^0.14.3",
+    "load-json-file": "^5.0.0"
+  }
+}
