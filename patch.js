@@ -1,7 +1,7 @@
 const fs = require('fs');
 const exec = require('child_process').exec;
 const loadJson = require('load-json-file');
-const updatesFile = 'updates.json';
+const updatesFile = './updates.json';
 
 /**
  * Validation.
