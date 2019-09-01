@@ -32,7 +32,7 @@ if (! fs.existsSync(path('app.asar.bak'))) {
 }
 
 // Extract the asar file.
-exec(`asar extract ${path('app.asar')} ${path('app')}`, () => {
+exec(`npx asar extract ${path('app.asar')} ${path('app')}`, () => {
     // Parse the updates file.
     loadJson(updatesFile).then(updates => {
         for (let file in updates) {

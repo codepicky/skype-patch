@@ -10,6 +10,7 @@
   "dependencies": {
     "asar": "^0.14.3",
     "json-parse-better-errors": "^1.0.2",
-    "load-json-file": "^5.0.0"
+    "load-json-file": "^5.0.0",
+    "npx": "^10.2.0"
   }
 }
