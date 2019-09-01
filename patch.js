@@ -52,8 +52,15 @@ exec(`asar extract ${path('app.asar')} ${path('app')}`, () => {
                     flags = regex.pop();
                     regex = regex.join('');
                     regex = regex.replace(/^#/, '\\#');
+                    regex = new RegExp(regex, flags);
 
-                    contents = contents.replace(new RegExp(regex, flags), substitute);
+                    if (regex.test(contents)) {
+                        contents = contents.replace(regex, substitute);
+                        
+                        console.log(`\x1b[33m${regex}\x1b[0m -- \x1b[32mSuccess\x1b[0m`);
+                    } else {
+                        console.log(`\x1b[33m${regex}\x1b[0m -- \x1b[31mFailed\x1b[0m`);
+                    }
                 }
             }
 

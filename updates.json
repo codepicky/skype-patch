@@ -1,23 +1,21 @@
 {
     "js/app.js": {
         "replace": {
-            "/black:\"#000000\"/i": "black:\"#2B2C33\"",
+            "/e.black=\"#000000\"/i": "e.black=\"#2B2C33\"",
             "/#1E2224/gi": "rgba(0, 0, 0, .2)",
             "/#2B333B/gi": "rgba(0, 0, 0, .1)",
             "/#1F1F1F/gi": "#2B2C33",
-            "/cardColor:i\\(6\\).color.gray400/gi": "cardColor:\"rgba(0, 0, 0, .15)\"",
-            "/messageComposerBackgroundColor:i\\(6\\).color.gray400/gi": "messageComposerBackgroundColor:\"rgba(0,0,0,0)\"",
+            "/cardColor:n\\(7\\).Color.gray400/gi": "cardColor:\"rgba(0, 0, 0, .15)\"",
+            "/messageComposerBackgroundColor:n\\(7\\).Color.gray400/gi": "messageComposerBackgroundColor:\"rgba(0,0,0,0)\"",
             "/,tiny:760,small:896/": ",tiny:0,small:0",
             "/,headerSizeSmall:24/g": ",headerSizeSmall:18"
-        }
+        },
+        "appendFile": "scripts.js"
     },
     "MainWindow.js": {
         "replace": {
             "/'minHeight': exports.minimumWindowSize.height,/": "'minHeight': exports.minimumWindowSize.height, 'frame': false,"
         }
-    },
-    "js/base64.js": {
-        "appendFile": "scripts.js"
     },
     "css/skype.css": {
         "appendFile": "style.css"
